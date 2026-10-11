@@ -20,9 +20,11 @@
 <header class='intro'>
   <h1>grainfield</h1>
   <p>
-    A gallery of generative noise. Every tile is a live fragment shader — fields of turbulence,
-    fractal warps and cellular noise, mapped through an OKLab palette and finished with grain.
-    Open one to tune it, then export a PNG or share the link.
+    {gallery.length} presets across {patternList.length} kinds of noise, each one a WebGL shader running live
+    in your browser. I made this after seeing the grainy gradients on Framer's
+    <a href='https://www.framer.com/state-of-sites-2026/'>State of Sites 2026</a> and wanting to pull them
+    apart myself. Click any tile to do the same: swap the colours, drag the sliders, then download a 4K PNG
+    or copy the link (the URL holds every setting).
   </p>
   <button type='button' class='button' onclick={surprise}>New random pattern</button>
 </header>
@@ -62,6 +64,10 @@
     font-weight: 600;
     letter-spacing: -0.045em;
     line-height: 0.9;
+  }
+
+  .intro a {
+    color: var(--fg);
   }
 
   .intro p {
